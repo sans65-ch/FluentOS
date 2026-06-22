@@ -1,0 +1,34 @@
+# Build artifacts
+*.o
+*.so
+*.a
+*.obj
+*.exe
+
+# Qt
+*.qmlc
+*.jsc
+Makefile
+*.mkdir
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# ISO
+*.iso
+*.tar.zst
+
+# Temporary
+*.tmp
+*.bak
