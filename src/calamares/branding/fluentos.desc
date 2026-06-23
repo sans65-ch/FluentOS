@@ -1,0 +1,34 @@
+# FluentOS 品牌样式
+
+[Branding]
+ProductName: FluentOS
+ProductVersion: 1.0.0
+ProductUrl: https://github.com/sans65-ch/FluentOS
+ComponentName: fluentos
+ComponentVersion: 1.0.0
+WindowWidth: 800
+WindowHeight: 600
+
+# 欢迎信息
+WelcomeLabel: "<b>欢迎使用 FluentOS</b><br/>基于 Arch Linux 的仿 Windows 桌面操作系统"
+WelcomeColumns: 2
+
+# 风格配置
+Style: quit
+Sidebar: brand
+SidebarBackground: false
+
+# 字体
+FontFamily: Segoe UI, Microsoft YaHei, sans-serif
+FontSize: 12
+FontWeight: normal
+TitleFontSize: 18
+TitleFontWeight: bold
+HeadlineFontSize: 24
+HeadlineFontWeight: bold
+
+# 颜色
+# AccentColor: #0078D4
+# BackgroundColor: #F3F3F3
+# SidebarBackground: #1F1F1F
+# SidebarTextColor: #FFFFFF

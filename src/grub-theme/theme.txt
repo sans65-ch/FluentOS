@@ -1,0 +1,102 @@
+# FluentOS GRUB Theme
+# Windows-style boot menu theme for GRUB
+
+# 主题元数据
+title: "FluentOS Theme"
+author: "FluentOS Team"
+license: "GPL-3.0"
+email: "https://github.com/sans65-ch/FluentOS"
+homepage: "https://github.com/sans65-ch/FluentOS"
+min-width: 800
+min-height: 600
+
+# 消息文件
+desktop-file: "devel-000.png"
+boot-menu: "boot_menu_fluentos.txt"
+system-font: "DejaVuSans.ttf"
+
+# 组件设置
+boot_menu {
+    left: 15%
+    top: 20%
+    width: 70%
+    height: 60%
+
+    # 填充模式
+    fill: "fill"
+    border: 0
+    border-radius: 0
+
+    # 标题栏
+    title {
+        visible: true
+        text: "FluentOS Boot Manager"
+        align: "left"
+        color: "#FFFFFF"
+    }
+
+    # 选中项
+    item {
+        color: "#FFFFFF"
+        selected-color: "#0078D4"
+        background-color: "transparent"
+        selected-background-color: "transparent"
+        icon: "yes"
+        font: "DejaVu Sans 14"
+    }
+
+    # 分隔符
+    separator {
+        color: "#3D3D3D"
+    }
+}
+
+# 进度条设置 (Windows 风格)
+progress_bar {
+    left: 15%
+    top: 90%
+    width: 70%
+    height: 2%
+
+    # 填充颜色 (Windows 蓝色)
+    fill-color: "#0078D4"
+    # 背景颜色
+    border-color: "#3D3D3D"
+    text-color: "#FFFFFF"
+
+    # 文本格式
+    text: " "
+}
+
+# 自定义图像
+image {
+    # 背景图像
+    file: "background.png"
+    mode: "scaled"
+    scale_mode: "fill"
+}
+
+# 字体设置
++ font {
+    # 主字体
+    regular: "DejaVuSans.ttf:14"
+    bold: "DejaVuSans-Bold.ttf:14"
+    italic: "DejaVuSans-Oblique.ttf:14"
+
+    # 颜色
+    color: "#FFFFFF"
+}
+
+# 颜色设置
++ color {
+    # 正常项
+    item_normal: "#FFFFFF"
+    # 选中项
+    item_selected: "#0078D4"
+    # 标题
+    title: "#FFFFFF"
+    # 背景
+    desktop: "#1F1F1F"
+    # 进度条背景
+    progress_bar_track: "#3D3D3D"
+}

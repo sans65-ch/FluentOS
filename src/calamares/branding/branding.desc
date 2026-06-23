@@ -1,0 +1,27 @@
+# FluentOS Calamares 配置
+# 品牌设置
+
+---
+componentName:     fluentos
+productName:       FluentOS
+productVersion:    1.0.0
+componentVersion:   1.0.0
+productUrl:        https://github.com/sans65-ch/FluentOS
+componentUrl:      https://github.com/sans65-ch/FluentOS
+bugReportUrl:      https://github.com/sans65-ch/FluentOS/issues
+knownIssuesUrl:    https://github.com/sans65-ch/FluentOS/wiki/Known-Issues
+helpUrl:           https://github.com/sans65-ch/FluentOS/wiki
+
+# 窗口设置
+windowWidth:       800
+windowHeight:      600
+
+# 显示欢迎向导
+showWelcome:       false
+showGoodbye:       true
+showCancel:        true
+showBack:          true
+
+# 媒体功能标志
+mediaFunction:     false
+sidebarBackground:  false

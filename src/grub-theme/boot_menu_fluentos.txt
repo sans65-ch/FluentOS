@@ -1,0 +1,31 @@
+# FluentOS Boot Menu Text Configuration
+# This file defines the boot menu appearance text
+
+[boot_menu]
+# Menu title
+title = "FluentOS"
+
+# Boot options
+default = "FluentOS (Default)"
+fallback = "FluentOS (Advanced)"
+
+# Help text
+help = "Use arrow keys to select, Enter to boot, 'e' to edit"
+
+[options]
+# Windows entry
+windows = "Windows (via GRUB)"
+
+# Recovery options
+recovery = "FluentOS (Recovery Mode)"
+safe_mode = "FluentOS (Safe Mode)"
+
+# Firmware settings
+firmware = "Firmware Settings (BIOS/UEFI)"
+
+[colors]
+# Text colors
+foreground = "white"
+background = "black"
+selected = "#0078D4"      # Windows blue
+highlight = "#FFB900"     # Warning yellow

@@ -1,0 +1,82 @@
+import QtQuick 2.0
+import QtQuick.Layouts 1.2
+
+Rectangle {
+    id: sideBarImage
+    anchors.fill: parent
+    color: "#1F1F1F"
+
+    // FluentOS Logo
+    Column {
+        anchors.centerIn: parent
+        spacing: 16
+
+        // Windows-style logo approximation
+        Rectangle {
+            width: 80
+            height: 80
+            radius: 16
+            color: "#0078D4"
+            anchors.horizontalCenter: parent.horizontalCenter
+
+            // Four squares like Windows logo
+            Row {
+                anchors.centerIn: parent
+                spacing: 4
+
+                Rectangle {
+                    width: 32
+                    height: 32
+                    radius: 4
+                    color: "#FFFFFF"
+                }
+
+                Rectangle {
+                    width: 32
+                    height: 32
+                    radius: 4
+                    color: "#80FFFFFF"
+                }
+            }
+
+            Row {
+                anchors.centerIn: parent
+                anchors.verticalCenterOffset: 18
+                spacing: 4
+
+                Rectangle {
+                    width: 32
+                    height: 32
+                    radius: 4
+                    color: "#80FFFFFF"
+                }
+
+                Rectangle {
+                    width: 32
+                    height: 32
+                    radius: 4
+                    color: "#40FFFFFF"
+                }
+            }
+        }
+
+        // Product name
+        Text {
+            text: "FluentOS"
+            color: "#FFFFFF"
+            font.pixelSize: 28
+            font.weight: Font.Bold
+            font.family: "Segoe UI"
+            anchors.horizontalCenter: parent.horizontalCenter
+        }
+
+        // Version
+        Text {
+            text: "Version 1.0.0"
+            color: "#AAAAAA"
+            font.pixelSize: 14
+            font.family: "Segoe UI"
+            anchors.horizontalCenter: parent.horizontalCenter
+        }
+    }
+}
