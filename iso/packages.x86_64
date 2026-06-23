@@ -1,0 +1,201 @@
+# FluentOS 软件包列表 (x86_64)
+# 基于 Arch Linux 的定制发行版
+
+# ===== 基础系统 =====
+base
+base-devel
+linux
+linux-firmware
+linux-headers
+linux-lts
+linux-lts-headers
+
+# ===== 系统工具 =====
+sudo
+vim
+nano
+git
+wget
+curl
+htop
+neofetch
+reflector
+pacman-contrib
+archlinux-keyring
+
+# ===== 网络工具 =====
+networkmanager
+network-manager-applet
+wireless_tools
+wpa_supplicant
+dialog
+openvpn
+networkmanager-openvpn
+dnsmasq
+
+# ===== 文件系统工具 =====
+ntfs-3g
+exfat-utils
+dosfstools
+mtools
+gparted
+parted
+os-prober
+grub
+efibootmgr
+dosfstools
+
+# ===== 桌面环境 - KDE Plasma =====
+plasma
+plasma-wayland-session
+kde-applications
+kde-graphics-meta
+kde-system-meta
+kde-utilities-meta
+
+# ===== 显示管理器 =====
+sddm
+sddm-kcm
+
+# ===== 窗口管理器组件 =====
+latte-dock
+kvantum-qt5
+kvantum-theme-sweet
+
+# ===== 办公软件 =====
+libreoffice-fresh
+libreoffice-fresh-zh-cn
+thunderbird
+thunderbird-i18n-zh-cn
+
+# ===== 浏览器 =====
+firefox
+firefox-i18n-zh-cn
+chromium
+
+# ===== 媒体播放器 =====
+vlc
+mpv
+elisa
+dragon
+
+# ===== 图形图像 =====
+gimp
+gwenview
+spectacle
+ksnapshot
+okular
+
+# ===== 工具软件 =====
+ark
+filelight
+kcalc
+kwrite
+kate
+konsole
+dolphin
+dolphin-plugins
+
+# ===== 输入法 =====
+fcitx5
+fcitx5-chewing
+fcitx5-qt
+fcitx5-gtk
+fcitx5-configtool
+fcitx5-chinese-addons
+
+# ===== Wine 和 Windows 兼容 =====
+wine
+wine-mono
+wine-gecko
+winetricks
+wine-staging
+lib32-libldap
+lib32-gnutls
+lib32-libpulse
+lib32-alsa-lib
+lib32-libxcomposite
+lib32-libxinerama
+lib32-libxrandr
+lib32-mpg123
+lib32-libtheora
+lib32-libvorbis
+lib32-libvpx
+
+# ===== 开发工具 =====
+base-devel
+gcc
+make
+cmake
+meson
+ninja
+python
+python-pip
+nodejs
+npm
+jdk-openjdk
+rust
+go
+
+# ===== 多媒体编解码 =====
+gst-libav
+gst-plugins-good
+gst-plugins-bad
+gst-plugins-ugly
+gst-plugins-base-libs
+ffmpeg
+ffmpegthumbnailer
+
+# ===== 字体 =====
+ttf-dejavu
+ttf-liberation
+ttf-opensans
+noto-fonts
+noto-fonts-cjk
+noto-fonts-emoji
+ttf-roboto
+
+# ===== 主题和图标 =====
+breeze
+breeze-gtk
+breeze-icons
+papirus-icon-theme
+arc-icon-theme
+
+# ===== 压缩工具 =====
+zip
+unzip
+p7zip
+unrar
+tar
+gzip
+bzip2
+xz
+
+# ===== 电源管理 =====
+powerdevil
+tlp
+tlp-rdw
+acpi
+acpi_call
+powertop
+
+# ===== 蓝牙 =====
+bluez
+bluez-utils
+bluedevil
+
+# ===== 打印支持 =====
+cups
+cups-pdf
+ghostscript
+gsfonts
+gutenprint
+foomatic-db
+foomatic-db-engine
+hplip
+
+# ===== 杂项 =====
+arch-install-scripts
+reflector
+pacman-mirrorlist

@@ -1,0 +1,105 @@
+# Maintainer: FluentOS Team <https://github.com/sans65-ch/FluentOS>
+pkgname=fluentos-desktop-meta
+pkgver=1.0.0
+pkgrel=1
+pkgdesc="FluentOS desktop environment meta-package"
+arch=('any')
+url="https://github.com/sans65-ch/FluentOS"
+license=('GPL3')
+depends=(
+    # 基础桌面
+    'plasma'
+    'plasma-wayland-session'
+    'sddm'
+    'sddm-kcm'
+    'latte-dock'
+
+    # KDE 应用
+    'dolphin'
+    'dolphin-plugins'
+    'konsole'
+    'kate'
+    'ark'
+    'gwenview'
+    'spectacle'
+    'okular'
+    'elisa'
+    'kcalc'
+
+    # 主题和图标
+    'breeze'
+    'breeze-gtk'
+    'breeze-icons'
+    'papirus-icon-theme'
+    'kvantum-qt5'
+
+    # 浏览器
+    'firefox'
+    'firefox-i18n-zh-cn'
+
+    # 办公
+    'libreoffice-fresh'
+    'libreoffice-fresh-zh-cn'
+    'thunderbird'
+    'thunderbird-i18n-zh-cn'
+
+    # 媒体
+    'vlc'
+    'mpv'
+    'ffmpeg'
+    'ffmpegthumbnailer'
+
+    # 输入法
+    'fcitx5'
+    'fcitx5-chewing'
+    'fcitx5-qt'
+    'fcitx5-gtk'
+    'fcitx5-configtool'
+    'fcitx5-chinese-addons'
+
+    # Windows 兼容
+    'wine'
+    'wine-mono'
+    'wine-gecko'
+    'winetricks'
+    'ntfs-3g'
+
+    # 工具
+    'htop'
+    'neofetch'
+    'git'
+    'vim'
+    'nano'
+    'gparted'
+
+    # 字体
+    'noto-fonts'
+    'noto-fonts-cjk'
+    'noto-fonts-emoji'
+    'ttf-dejavu'
+    'ttf-liberation'
+    'ttf-opensans'
+)
+optdepends=(
+    'chromium: 备用浏览器'
+    'gimp: 图像编辑'
+    'steam: 游戏平台'
+    'discord: 聊天软件'
+    'code: 代码编辑器'
+)
+provides=('fluentos-desktop')
+conflicts=('fluentos-desktop')
+replaces=()
+backup=()
+options=()
+install=
+changelog=
+source=()
+noextract=()
+md5sums=()
+
+package() {
+    # 这是一个 meta 包，不安装任何文件
+    # 所有文件都通过依赖安装
+    true
+}

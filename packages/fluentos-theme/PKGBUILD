@@ -1,0 +1,69 @@
+# Maintainer: FluentOS Team <https://github.com/sans65-ch/FluentOS>
+pkgname=fluentos-theme
+pkgver=1.0.0
+pkgrel=1
+pkgdesc="FluentOS Fluent Design theme and glass effects"
+arch=('any')
+url="https://github.com/sans65-ch/FluentOS"
+license=('GPL3')
+depends=(
+    'kwin'
+    'plasma-desktop'
+    'qt5-base'
+    'qt5-declarative'
+)
+optdepends=(
+    'kvantum-qt5: 额外主题支持'
+)
+makedepends=()
+install="$pkgname.install"
+source=(
+    "git+https://github.com/sans65-ch/FluentOS.git"
+)
+md5sums=(
+    'SKIP'
+)
+
+prepare() {
+    cd "${srcdir}/FluentOS"
+    # 准备主题文件
+}
+
+build() {
+    cd "${srcdir}/FluentOS"
+    # 编译 QML 主题
+    # 这是一个纯 QML/CSS 主题，不需要编译
+    true
+}
+
+package() {
+    cd "${srcdir}/FluentOS"
+
+    # 安装主题文件
+    install -d "${pkgdir}/usr/share/fluentos/themes"
+    cp -r src/themes/fluent-theme/* "${pkgdir}/usr/share/fluentos/themes/"
+
+    # 安装玻璃效果
+    install -d "${pkgdir}/usr/share/fluentos/effects"
+    cp -r src/themes/glass-effect/* "${pkgdir}/usr/share/fluentos/effects/"
+
+    # 安装 QML 组件
+    install -d "${pkgdir}/usr/share/fluentos/qml"
+    # 复制 QML 文件
+
+    # 安装壁纸
+    install -d "${pkgdir}/usr/share/backgrounds/fluentos"
+    # 复制壁纸文件
+
+    # 安装 KWin 效果脚本
+    install -d "${pkgdir}/usr/share/kwin/effects"
+    # 复制 KWin 效果
+
+    # 安装图标
+    install -d "${pkgdir}/usr/share/icons/fluentos"
+    # 复制图标
+
+    # 安装配置
+    install -d "${pkgdir}/etc/xdg"
+    # 复制配置文件
+}

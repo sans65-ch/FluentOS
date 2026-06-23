@@ -1,0 +1,71 @@
+# Maintainer: FluentOS Team <https://github.com/sans65-ch/FluentOS>
+pkgname=fluentos-shell
+pkgver=1.0.0
+pkgrel=1
+pkgdesc="FluentOS desktop shell - taskbar, start menu, file manager, control panel"
+arch=('x86_64')
+url="https://github.com/sans65-ch/FluentOS"
+license=('GPL3')
+depends=(
+    'qt5-base'
+    'qt5-declarative'
+    'qt5-quickcontrols2'
+    'qt5-graphicaleffects'
+    'kwin'
+    'plasma-framework'
+    'python'
+    'python-pyqt5'
+)
+makedepends=(
+    'cmake'
+    'extra-cmake-modules'
+    'qt5-tools'
+)
+optdepends=(
+    'fluentos-theme: Fluent Design 主题'
+    'ntfs-3g: Windows 分区支持'
+    'wine: Windows 程序运行'
+)
+install="$pkgname.install"
+source=(
+    "git+https://github.com/sans65-ch/FluentOS.git"
+)
+md5sums=(
+    'SKIP'
+)
+
+prepare() {
+    cd "${srcdir}/FluentOS"
+    mkdir -p build
+}
+
+build() {
+    cd "${srcdir}/FluentOS/build"
+
+    # 配置 CMake 构建
+    cmake ../src/shell \
+        -DCMAKE_BUILD_TYPE=Release \
+        -DCMAKE_INSTALL_PREFIX=/usr \
+        -DKDE_INSTALL_LIBDIR=lib \
+        -DKDE_INSTALL_QMLDIR=lib/qt/qml \
+        -DKDE_INSTALL_PLUGINDIR=lib/qt/plugins
+
+    make -j$(nproc)
+}
+
+package() {
+    cd "${srcdir}/FluentOS/build"
+    make DESTDIR="${pkgdir}" install
+
+    # 安装 Python 脚本
+    install -d "${pkgdir}/usr/share/fluentos/scripts"
+    cp -r ../src/shell/system/*.py "${pkgdir}/usr/share/fluentos/scripts/"
+
+    # 安装 systemd 服务
+    install -d "${pkgdir}/usr/lib/systemd/user"
+    # 复制服务文件
+
+    # 安装桌面文件
+    install -d "${pkgdir}/usr/share/applications"
+    # 复制 .desktop 文件
+}
